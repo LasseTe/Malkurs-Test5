@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunstkurs - Malkurs</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #2c2c2c; }
+        header { background: linear-gradient(135deg, #d4845c 0%, #8b4513 50%, #654321 100%); color: white; padding: 1rem 0; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-size:1.5rem; font-weight:bold; }
+        nav ul { list-style:none; display:flex; gap:2rem; }
+        nav a { color:white; text-decoration:none; transition:opacity 0.3s; }
+        .hero { background: linear-gradient(135deg, #d4845c 0%, #c9723e 50%, #8b4513 100%); color:white; padding:6rem 2rem; text-align:center; }
+        .cta-button { display:inline-block; background:white; color:#8b4513; padding:0.75rem 2rem; border-radius:50px; text-decoration:none; font-weight:bold; }
+        main { max-width:1200px; margin:0 auto; padding:4rem 2rem; }
+        .section { margin-bottom:4rem; }
+        .section h2 { font-size:2rem; margin-bottom:2rem; color:#8b4513; }
+        .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; }
+        .card { background:linear-gradient(135deg,#f5e6d3 0%,#ede0d3 100%); padding:2rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); border-left:5px solid #c9723e; }
+        footer { background:linear-gradient(135deg,#3a3a3a 0%,#1a1a1a 100%); color:#f5e6d3; text-align:center; padding:2rem; margin-top:4rem; }
+        .quote-section { background: linear-gradient(135deg,#f5e6d3 0%,#ede0d3 100%); padding:3rem 2rem; text-align:center; margin:2rem 0; border-radius:8px; border-left:5px solid #d4845c; }
+        .quote-section p { font-size:1.3rem; color:#8b4513; font-style:italic; margin-bottom:0.5rem; }
+        .quote-author { color:#c9723e; font-weight:bold; font-size:1rem; }
+        @media (max-width:768px) { .hero h1{font-size:2rem;} }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🎨 Kunstkurs</div>
+            <ul>
+                <li><a href="#home">Startseite</a></li>
+                <li><a href="#features">Kurse</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Willkommen zu unserem Malkurs</h1>
+        <p>Entdecke deine künstlerischen Fähigkeiten und lerne von professionellen Künstlern</p>
+        <a href="#features" class="cta-button">Jetzt anmelden</a>
+    </section>
+
+    <main>
+        <section class="quote-section">
+            <p id="daily-quote">Laden...</p>
+            <div class="quote-author" id="quote-author"></div>
+        </section>
+
+        <section id="features" class="section">
+            <h2>Unsere Malkurse</h2>
+            <div class="cards">
+                <div class="card"><h3>🖌️ Anfänger Kurs</h3><p>Perfekt für Anfänger. Lerne die Grundlagen der Malerei, Farbtheorie und verschiedene Maltechniken.</p></div>
+                <div class="card"><h3>🎨 Fortgeschrittene</h3><p>Entwickle deine Fähigkeiten weiter. Arbeite an komplexeren Komposition, Licht und Schatten sowie persönlichem Stil.</p></div>
+                <div class="card"><h3>✨ Spezialisierte Techniken</h3><p>Meistere spezialisierte Techniken wie Aquarell, Acryl, Öl oder digitale Malerei.</p></div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>Über unseren Kunstkurs</h2>
+            <p>Unser Kunstkurs ist eine Gemeinschaft von kreativen Menschen. Mit erfahrenen Lehrkräften und modernen Materialien helfen wir dir, dein kreatives Potenzial zu entfalten.</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Kontakt & Anmeldung</h2>
+            <p>Kontakt: <strong>kontakt@kunstkurs.de</strong> | <strong>+49 (123) 456-7890</strong></p>
+        </section>
+
+        <section id="booking" class="section">
+            <h2>Kurstermine buchen</h2>
+            <!-- Calendly Inline-Widget Beginn -->
+            <div style="min-width:320px;height:700px;">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/lasse-teunis/neues-meeting" style="min-width:320px;height:700px;"></div>
+            </div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly Inline-Widget Ende -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kunstkurs. Alle Rechte vorbehalten.</p>
+        <p>Mit Leidenschaft für Kunst & Kreativität</p>
+    </footer>
+
+    <script>
+        const quotes = [
+            { text: "Kunst ist nicht das, was Sie sehen, sondern das, was Sie denken lässt.", author: "Joan Miró" },
+            { text: "Die Farbe ist mein Tag-und-Nacht-Thema, mein Leben.", author: "Joan Mitchell" },
+            { text: "Jeder Kind ist ein Künstler. Das Problem liegt darin, ein Künstler zu bleiben, sobald man aufwächst.", author: "Pablo Picasso" },
+            { text: "Kunstfreiheit ist die Grundlage aller anderen Freiheiten.", author: "John Dewey" },
+            { text: "Die beste Zeit, um einen Baum zu pflanzen, war vor 20 Jahren. Die zweite beste Zeit ist jetzt. Das gilt auch für Kunst.", author: "Chinesisches Sprichwort" },
+            { text: "Kunst wäscht den Staub des alltäglichen Lebens von der Seele.", author: "Pablo Picasso" },
+            { text: "Kultur schafft das Verständnis und die Liebe zwischen verschiedenen Völkern.", author: "Pearl S. Buck" },
+            { text: "Ein Kunstwerk ist eine Sache, bei der die Form wichtiger ist als der Stoff.", author: "Aristoteles" },
+            { text: "Die Kunst ist die höchste Form der Hoffnung.", author: "Gerhard Richter" },
+            { text: "Kreativität ist die Intelligenz, die Spaß hat.", author: "Albert Einstein" },
+            { text: "In einem verrückten Welt ist die Kunst die einzige Wahnsinn, die erlaubt ist.", author: "Frida Kahlo" },
+            { text: "Das Material ist nicht das Problem. Die Idee ist das Material.", author: "Lawrence Weiner" },
+            { text: "Kreativität nimmt Mut - den Mut, alte Ideen loszulassen.", author: "Maya Angelou" },
+            { text: "Kultur ist das Gedächtnis eines Volkes.", author: "Edwarda Brown" },
+            { text: "Kunst macht sichtbar, was real ist.", author: "Wassily Kandinsky" },
+            { text: "Die schönsten Farbkombinationen finden sich in der Natur.", author: "Sherwin Williams" },
+            { text: "Jeder Mensch ist ein Künstler in seinen eigenen Träumen.", author: "Unbekannt" },
+            { text: "Kultur ist die Blüte der Zivilisation.", author: "Edward Sapir" },
+            { text: "Kunstwerke sind Fenster in die Seele des Künstlers.", author: "Salvador Dalí" },
+            { text: "Die beste Kunstform ist das Leben selbst.", author: "Oscar Wilde" },
+            { text: "Farbe ist eine Kraft, die unmittelbar auf die Seele wirkt.", author: "Wassily Kandinsky" },
+            { text: "Kultur ist die Leidenschaft, die die Menschheit zusammenbindet.", author: "Maya Angelou" },
+            { text: "Künstler sehen die Schönheit in Dingen, die andere übersehen.", author: "Vincent van Gogh" },
+            { text: "Die Kunst ist der Weg, um Wahrheit auszudrücken, die Worte nicht können.", author: "Gustav Stickley" },
+            { text: "Ohne Tradition ist die Kunst nicht möglich. Ohne Revolution auch nicht.", author: "John Berger" },
+            { text: "Kreativität ist Intelligenz, die Spaß beim Spielen hat.", author: "Carl Jung" },
+            { text: "Die Kultur eines Landes spiegelt sich in seiner Kunst wider.", author: "Jawaharlal Nehru" },
+            { text: "Malen ist Poesie, die man sieht statt hört.", author: "Leonardo da Vinci" },
+            { text: "Kunst ist nicht das Denken, sondern das Tun.", author: "George Bernard Shaw" },
+            { text: "Kreativität ist die Kraft, etwas Neues zu erschaffen.", author: "Maya Angelou" }
+        ];
+
+        function getDailyQuote() {
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+            const quoteIndex = dayOfYear % quotes.length;
+            return quotes[quoteIndex];
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const quote = getDailyQuote();
+            document.getElementById('daily-quote').textContent = `"${quote.text}"`;
+            document.getElementById('quote-author').textContent = `— ${quote.author}`;
+        });
+    </script>
+</body>
+</html>
